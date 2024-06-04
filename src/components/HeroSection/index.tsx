@@ -25,12 +25,14 @@ const HeroSection = () => {
           </Right>
         </Wrapper>
       </Container>
-      {device === "mobile" && <MobileContent>
-        <Header>Host your meeting with world-class</Header>
-        <Header>
-          amenities <ColorText>₹199/-!</ColorText>
-        </Header>
-      </MobileContent>}
+      {device === "mobile" && (
+        <MobileContent>
+          <Header>Host your meeting with world-class</Header>
+          <Header>
+            amenities <ColorText>₹199/-!</ColorText>
+          </Header>
+        </MobileContent>
+      )}
     </>
   );
 };
@@ -58,8 +60,9 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
+  width: 100%;
+  padding-left: 20px;
   @media ${devices.desktop} {
-    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -104,7 +107,7 @@ const Header = styled.div`
 
   @media ${devices.mobile} {
     font-size: 20px;
-     gap: 5px;
+    gap: 5px;
   }
 
   gap: 10px;
